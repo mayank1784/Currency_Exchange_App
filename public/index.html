@@ -13,13 +13,13 @@
      *
     */
      -->    
+     
     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
         <head>
-            <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-            <title>plugin___file_cover___1</title>
+            <meta http-equiv="X-UA-Compatible" content="text/html" charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="description" content="" >
-            <link rel="StyleSheet" href= __dirname + "styles.css" />
+            <link rel="StyleSheet" href="styles.css" />
             <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
             <!-- Add your custom HEAD content here -->
     <title>Currency Converter</title>
@@ -49,9 +49,8 @@
         From
     </div>
     <div id="from_country_column"  >
-        <!-- <label for="rectangle_4" >Select an option:</label> -->
-  <select id="rectangle_4">
-    <option value="" class="placeholder" disabled selected>Country</option>
+        <select id="rectangle_4" >  
+    <option value=""  disabled selected >Country</option>
   </select>
         <!-- <input id="rectangle_4" type="text" name="fcountry" placeholder="Country">
 
@@ -61,11 +60,58 @@
         To
     </div>
     <div id="to_country_column"  >
-        <input id="rectangle_5" type="text" name="tocountry" placeholder="Country">
+        <select id="rectangle_5" >  
+        
+            <option value=""  disabled selected >Country</option>
+          </select>
+        <!-- <input id="rectangle_5" type="text" name="tocountry" placeholder="Country">
 
-        <img src="skins/vector_ek1.png" id="vector_ek1" />
+        <img src="skins/vector_ek1.png" id="vector_ek1" /> -->
     </div>
-</form>                   
+</form>
+<script>
+    // Fetch the currencies from the API
+    fetch('/api/currencies')
+      .then(response => response.json())
+      .then(data => {
+        // Get the currency dropdown element
+        const dropdown = document.getElementById('rectangle_4');
+  
+        // Remove the loading option
+        //dropdown.innerHTML = '';
+  
+        // Loop through the currencies and add them to the dropdown
+        Object.keys(data).forEach(code => {
+          const option = document.createElement('option');
+          option.value = code;
+          option.innerHTML = `${code} - ${data[code]}`;
+          dropdown.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching currencies:', error);
+      });
+      fetch('/api/currencies')
+      .then(response => response.json())
+      .then(data => {
+        // Get the currency dropdown element
+        const dropdown2 = document.getElementById('rectangle_5');
+  
+        // Remove the loading option
+        //dropdown.innerHTML = '';
+  
+        // Loop through the currencies and add them to the dropdown
+        Object.keys(data).forEach(code => {
+          const option = document.createElement('option');
+          option.value = code;
+          option.innerHTML = `${code} - ${data[code]}`;
+          dropdown2.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching currencies:', error);
+      });
+  </script>                   
                         <div id="exchange_rate" >
                             Exchange Rate
                         </div>
