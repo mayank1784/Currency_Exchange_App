@@ -1,0 +1,15 @@
+{
+  "name": "currency_conv_app",
+  "version": "1.0.0",
+  "description": "an web app for real time currency exchange.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayank Jain",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "nodemon": "^2.0.20"
+  }
+}
