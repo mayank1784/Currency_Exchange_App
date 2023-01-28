@@ -4,21 +4,21 @@ const request = require('request');
 const app = express();
 
 // Set up the API endpoint for fetching the dropdown options
-app.get('/api/dropdown', (req, res) => {
-    // Make the API request to fetch the dropdown options
-    request('https://api.example.com/dropdown', (error, response, body) => {
-        // If there is no error, send the options back to the client
-        if (!error && response.statusCode === 200) {
-            res.send(body);
-        } else {
-            res.send('Error fetching dropdown options');
-        }
-    });
-});
+// app.get('/api/dropdown', (req, res) => {
+//     // Make the API request to fetch the dropdown options
+//     request('https://api.example.com/dropdown', (error, response, body) => {
+//         // If there is no error, send the options back to the client
+//         if (!error && response.statusCode === 200) {
+//             res.send(body);
+//         } else {
+//             res.send('Error fetching dropdown options');
+//         }
+//     });
+// });
 
 // Serve the HTML file with the form
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/form.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 // Start the server
@@ -27,7 +27,7 @@ app.listen(3000, () => {
 });
 
 // <!-- HTML form  -->
-<form>
+{/* <form>
   <label for="dropdown">Select an option:</label>
   <select id="dropdown">
     <option value="" disabled selected>Loading options...</option>
@@ -57,4 +57,4 @@ app.listen(3000, () => {
     .catch(error => {
       console.error('Error fetching options:', error);
     });
-</script>
+</script> */}
