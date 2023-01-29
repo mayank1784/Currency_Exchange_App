@@ -4,7 +4,8 @@
   "description": "an web app for real time currency exchange.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
   },
   "author": "Mayank Jain",
   "license": "ISC",

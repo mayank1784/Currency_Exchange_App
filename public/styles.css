@@ -157,15 +157,6 @@ div { position: absolute; }
 }
 
 
-/* #country:before {
-
-	content: "Country";
-	position: absolute;
-	top: 0px;
-	left: 4px;
-	color: #000000;
-} */
-
 
 #from {
 	top: 282px;
@@ -179,14 +170,6 @@ div { position: absolute; }
 	color: rgba(0,0,0,1);
 	opacity: 1;
 }
-/* #from:before {
-
-	content: "From";
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	color: #000000;
-} */
 
 
 #to {
@@ -201,14 +184,6 @@ div { position: absolute; }
 	color: rgba(0,0,0,1);
 	opacity: 1;
 }
-/* #to:before {
-
-	content: "To";
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	color: #000000;
-} */
 
 #to_country_column {
 	top: 404px;
@@ -245,17 +220,6 @@ div { position: absolute; }
 }
 
 
-/* #country_ek1:before {
-
-	content: "Country";
-	position: absolute;
-	top: 0px;
-	left: 4px;
-	color: #000000;
-} */
-
-
-
 #currency_converter {
 	top: 0px;
 	left: 3px;
@@ -269,10 +233,6 @@ div { position: absolute; }
 	color:#2B65F9;
     margin-bottom: 2px;
 }
-
-
-
-
 
 #exchange_rate {
 	top: 474px;
