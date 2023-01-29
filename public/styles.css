@@ -10,8 +10,29 @@ img { position: absolute; display: block; margin: 0px; border: none; padding: 0p
 /* Only edit this if you know what you are doing! */
 div { position: absolute; }
 
+#heading {
+	top: 15px;
+	left: 23px;
+	width: 314px;
+	height: 89px;
+}
+
+#check_live_foreign_currency_exchange_rates {
+	top: 10px;
+	left: -3px;
+	width: 327px;
+	height: 55px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 16px;
+	text-align: center;
+	color:#000000;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+
 #content-container { display: block; position: relative; width: 1920px; height: 960px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
-/* #content-container { display: block; position: relative; width:12rem; height: 12rem; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  } */
 
 #form_background {
 	top: 155px;
@@ -233,12 +254,7 @@ div { position: absolute; }
 	color: #000000;
 } */
 
-#heading {
-	top: 15px;
-	left: 23px;
-	width: 314px;
-	height: 89px;
-}
+
 
 #currency_converter {
 	top: 0px;
@@ -255,20 +271,7 @@ div { position: absolute; }
 }
 
 
-#check_live_foreign_currency_exchange_rates {
-	top: 10px;
-	left: -3px;
-	width: 327px;
-	height: 55px;
-	overflow: hidden;
-	font-family: Montserrat;
-	font-size: 16px;
-	text-align: center;
-	color:#000000;
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 20px;
-}
+
 
 
 #exchange_rate {

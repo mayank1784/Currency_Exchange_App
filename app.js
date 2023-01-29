@@ -1,7 +1,6 @@
 // Import the necessary modules
 const express = require('express');
 const request = require('request');
-const $ = require('jquery');
 const app = express();
 const https = require('https');
 const appid = 'f5acb51cd0f141c0a19a43a5e5539fda';
@@ -11,16 +10,6 @@ const oxr = require('open-exchange-rate');
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-// oxr.set({ app_id: appid });
-
-// let currencies = ["INR", "BDT"];
-
-// oxr.getExchangeRate(currencies).then(({rates}) => {
-//     console.log(rates); // { CAD: 1.342507, EUR: 0.896797}
-// })
-// .catch(err => {
-//     console.log('Error :: ',err);
-// });
 app.get('/api/currencies', (req, res) => {
   // Make the API request to fetch the currencies
   request('https://openexchangerates.org/api/currencies.json', (error, response, body) => {
