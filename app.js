@@ -46,7 +46,7 @@ oxr.getExchangeRate(currencies).then(({rates}) => {
     
 });
 
-app.listen(3000 || process.env.PORT, () => {
-    console.log('Server listening on port 3000');
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+console.log(Server is running on port ${port});
 });
-
