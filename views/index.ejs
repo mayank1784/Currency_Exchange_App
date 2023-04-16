@@ -5,7 +5,7 @@
             <meta name="description" content="" >
             <link rel="StyleSheet" href="styles.css" />
             <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
-            <!-- Add your custom HEAD content here -->
+    
     <title>Currency Converter</title>
         </head>
         <body>
@@ -36,9 +36,6 @@
         <select id="rectangle_4" name = "fromCountry" >  
     <option value=""  disabled selected >Country</option>
   </select>
-        <!-- <input id="rectangle_4" type="text" name="fcountry" placeholder="Country">
-
-        <img src="skins/vector.png" id="vector" /> -->
     </div>
     <div id="to" >
         To
@@ -48,18 +45,12 @@
         
             <option value=""  disabled selected >Country</option>
           </select>
-        <!-- <input id="rectangle_5" type="text" name="tocountry" placeholder="Country">
-
-        <img src="skins/vector_ek1.png" id="vector_ek1" /> -->
     </div>
     <div id="exchange_rate" >
-        Exchange Rate
+        Amount
     </div>
     <div id="rate" >
-        0.00
-    </div>
-    <div id = "convertedAmount">
-
+      <%= amount %>
     </div>
         <button type="submit" id="submit_button">Convert</button>
 
@@ -93,10 +84,7 @@
                     // Get the currency dropdown element
                     const dropdown2 = document.getElementById('rectangle_5');
               
-                    // Remove the loading option
-                    //dropdown.innerHTML = '';
-              
-                    // Loop through the currencies and add them to the dropdown
+
                     Object.keys(data).forEach(code => {
                       const option = document.createElement('option');
                       option.value = code;
