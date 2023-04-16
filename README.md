@@ -1,7 +1,7 @@
 # Currency Exchange App
 ### This is a web application that allows users to exchange currencies based on the latest exchange rates. Users can input the amount and the currencies they want to exchange, and the app will calculate the converted amount based on the latest exchange rates.
 
-##Table of Contents
+## Table of Contents  
 1.Installation  
 2.Usage  
 3.Features  
